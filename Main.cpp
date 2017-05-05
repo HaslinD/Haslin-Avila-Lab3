@@ -1,11 +1,11 @@
 #include <iostream>
 #include <cmath>
-#include <sstresm>
+#include <sstream>
 
 using namespace std;
 
-int menu(int);
-int convert(int);
+int menu();
+
 
 int main(){
     bool salir = false;
@@ -14,16 +14,16 @@ int main(){
             case 1:{
                 int numeroN, count = 0;
 		stringstream stringN1, stringN2;
-		String binary;
+		string binary;
 
 		cout << "Ingrese Un Numero: ";
 		cin >> numeroN;
-		for(int i = 0, i < numeroN, i++){
+		for(int i = 0; i < numeroN; i++){
 			stringN1 << convert(i);
 			binary = stringN1.str();
 			
-			for(int j = 0, j < binary.size(), j++){
-				if(binary[j] == "1"){
+			for(int j = 0; j < binary.size(); j++){
+				if(binary[j] == '1'){
 					count++;	
 				}
 			}
@@ -45,11 +45,6 @@ int main(){
     }//Fin while
 
     return 0;
-}
-
-stringstream convert(int value){
-    
-
 }
 
 int menu(){
