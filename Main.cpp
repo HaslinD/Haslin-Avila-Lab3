@@ -1,6 +1,5 @@
 #include <iostream>
-#include <cmath>
-#include <sstream>
+#include <math.h>
 #include <bitset>
 
 
@@ -15,13 +14,12 @@ int main(){
         switch(menu()){
             case 1:{
                 int numeroN, count = 0;
-		stringstream stringN1, stringN2;
-		string binary;
 
 		cout << "Ingrese Un Numero: ";
 		cin >> numeroN;
-		for(int i = 0; i <= numero; i++){
-			binary = bitset<8>(i).to_string();
+		for(int i = 0; i <= numeroN; i++){
+			count = 0;
+			string binary = bitset<8>(i).to_string();
 			
 			for(int j = 0; j < binary.size(); j++){
 				if(binary[j] == '1'){
@@ -33,6 +31,7 @@ int main(){
 			}
 		}
 		cout << endl;
+		cout << "---------------------------" << endl;
                 break;}
 
             case 2:{
@@ -65,7 +64,7 @@ int menu(){
     int opcion;
     bool valido = true;
     do{
-        cout << "    MENU" << endl
+        cout << "-----MENU------" << endl
              << "1.- Ejercicio 1" << endl
              << "2.- Ejercicio 2" << endl
              << "3.- Salir" << endl;
@@ -78,8 +77,8 @@ int menu(){
         else {
             cout << "Opción no válida, intente de nuevo ..." << endl;
         }
-
-
+	cout << "----------------------" << endl;
+		
     }while(!valido);
     return opcion;
 }
