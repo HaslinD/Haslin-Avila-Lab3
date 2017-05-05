@@ -58,8 +58,8 @@ int main(){
             case 3:
                 salir = true;
                 break;
-        }//Fin switch
-    }//Fin while
+        }
+    }
 
     return 0;
 }
