@@ -35,7 +35,24 @@ int main(){
                 break;}
 
             case 2:{
-     		        	
+		int** Matriz;
+		int tamaN, cont = 0;     		
+		cout << "ingrese el tamaño de N: ";
+		cin >> tamaN;
+		Matriz = new int*[tamaN];
+
+		for(int i = 0; i < tamaN; i++){
+			Matriz[i] = new int[tamaN]	
+		}
+		for(int i = 0; i < tamaN; i++) {
+			for(int j = 0; j < tamaN; j++){
+				Matriz[i][j] = i * j;
+			}
+		}
+				
+		
+				
+
                 break;}
 
             case 3:
