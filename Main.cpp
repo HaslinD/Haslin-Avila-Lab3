@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cmath>
 #include <sstream>
+#include <bitset>
+
 
 using namespace std;
 
@@ -18,9 +20,8 @@ int main(){
 
 		cout << "Ingrese Un Numero: ";
 		cin >> numeroN;
-		for(int i = 0; i < numeroN; i++){
-			stringN1 << convert(i);
-			binary = stringN1.str();
+		for(int i = 0; i <= numero; i++){
+			binary = bitset<8>(i).to_string();
 			
 			for(int j = 0; j < binary.size(); j++){
 				if(binary[j] == '1'){
@@ -28,10 +29,10 @@ int main(){
 				}
 			}
 			if(count % 2 == 0){
-				stringN2 << i << ",";		
+				cout << i << ",";		
 			}
 		}
-		
+		cout << endl;
                 break;}
 
             case 2:{
@@ -46,6 +47,19 @@ int main(){
 
     return 0;
 }
+
+//pointless code;
+/*while(no>0) {
+	rem[i]=no%2;
+	i++;
+	no=no/2;
+}
+cout<<"Binary Number is :";
+	for(j=i-1;j>=0;j--) {
+		cout<<rem[j];
+	}
+}*/
+
 
 int menu(){
     int opcion;
