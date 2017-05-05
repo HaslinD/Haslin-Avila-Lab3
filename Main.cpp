@@ -64,18 +64,6 @@ int main(){
     return 0;
 }
 
-//pointless code;
-/*while(no>0) {
-	rem[i]=no%2;
-	i++;
-	no=no/2;
-}
-cout<<"Binary Number is :";
-	for(j=i-1;j>=0;j--) {
-		cout<<rem[j];
-	}
-}*/
-
 
 int menu(){
     int opcion;
